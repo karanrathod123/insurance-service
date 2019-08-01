@@ -1,4 +1,4 @@
-package hcl.insurance.config;
+package com.hcl.insurance.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
