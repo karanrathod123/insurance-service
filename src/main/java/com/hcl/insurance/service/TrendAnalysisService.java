@@ -11,16 +11,12 @@ import com.hcl.insurance.dto.CalculatedPolicy;
 import com.hcl.insurance.dto.ResponseData;
 import com.hcl.insurance.exception.ResourceNotFoundException;
 import com.hcl.insurance.repository.OptedPoliciesRepository;
-import com.hcl.insurance.repository.PolicyRepository;
 
 @Service
 public class TrendAnalysisService {
 
 	@Autowired
 	private OptedPoliciesRepository optedPoliciesRepository;
-
-	@Autowired
-	private PolicyRepository policyRepository;
 
 	public ResponseData getPoliciesTrends(String trendType) {
 

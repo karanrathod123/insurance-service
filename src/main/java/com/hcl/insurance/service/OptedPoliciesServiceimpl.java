@@ -37,7 +37,7 @@ public class OptedPoliciesServiceimpl implements com.hcl.insurance.service.Opted
 			Optional<Policy> policyOptional = policyRepository.findById(optedPoliciesDto.getPolicyId());
 			if (policyOptional.isPresent()) {
 				if (optedPoliciesDto.isAccepted()) {
-					if ((userOptional.get().getAge() < 13 || userOptional.get().getAge() > 65) && optedPoliciesDto.getNominee()=="") {
+					if ((userOptional.get().getAge() < 13 || userOptional.get().getAge() > 65) && optedPoliciesDto.getNominee().equals("")) {
 						responseData.setHttpStatus(HttpStatus.BAD_REQUEST);
 						responseData.setMessage("Your age is not eligible...please add nominee");
 						return responseData;
