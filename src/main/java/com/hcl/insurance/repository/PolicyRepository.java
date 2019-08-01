@@ -7,7 +7,5 @@ import com.hcl.insurance.entity.Policy;
 
 @Repository
 public interface PolicyRepository extends JpaRepository<Policy, Long>{
-
-	
 	
 }
