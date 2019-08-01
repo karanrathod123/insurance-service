@@ -32,7 +32,8 @@ public class PolicyController {
 		ByteArrayInputStream bis = (ByteArrayInputStream) response.getData();
 
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Content-Disposition", "inline; filename=userreport.pdf");
+		headers.add("Content-Disposition", "attachment; filename=\"userreport.pdf\"");
+
 
 		return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
 				.body(new InputStreamResource(bis));
