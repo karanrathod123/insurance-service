@@ -1,4 +1,4 @@
-package hcl.insurance.entity;
+package com.hcl.insurance.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
