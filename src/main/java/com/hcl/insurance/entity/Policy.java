@@ -32,4 +32,6 @@ public class Policy implements Serializable{
 	private Integer policyTerm;
 	
 	private Double yearlyPremium;
+	
+	private String termsAndCondition;
 }
