@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.hcl.insurance.entity.OptedPolicies;
+import com.hcl.insurance.entity.User;
 
 @Repository
 public interface OptedPoliciesRepository extends JpaRepository<OptedPolicies, Long> {
@@ -32,5 +33,7 @@ public interface OptedPoliciesRepository extends JpaRepository<OptedPolicies, Lo
 	
 	@Query(value = "SELECT  count(*) FROM insuranceservice.opted_policies;", nativeQuery = true)
 	Integer findBySearchTermTotalPolicies();
+	
+	public List<OptedPolicies> findByUserId(User userId);
 	
 }
