@@ -1,4 +1,4 @@
-package hcl.insurance;
+package com.hcl.insurance;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
