@@ -43,7 +43,7 @@ public class OptedPoliciesServiceimpl implements com.hcl.insurance.service.Opted
 						return responseData;
 					}else {
 						LocalDate today = LocalDate.now();
-						LocalDate maturityAge = today.plusYears(15);
+						LocalDate maturityAge = today.plusYears(policyOptional.get().getPolicyTerm());
 						OptedPolicies optedPolicies = new OptedPolicies();
 						optedPolicies.setBookingDate(LocalDate.now());
 						optedPolicies.setMaturityDate(maturityAge);
