@@ -1,13 +1,13 @@
 package com.hcl.insurance.service;
 
-import java.util.List;
 
 
-import com.hcl.insurance.entity.Policy;
+import com.hcl.insurance.dto.ResponseData;
+
 
 
 public interface AllPoliciesService {
 	
-	public List<Policy> listOfPolicies(Policy policy);
+	public ResponseData listOfPolicies();
 
 }
