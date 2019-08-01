@@ -1,7 +1,6 @@
 package com.hcl.insurance.service;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +50,6 @@ public class OptedPoliciesServiceimpl implements com.hcl.insurance.service.Opted
 						optedPolicies.setNominee(optedPoliciesDto.getNominee());
 						optedPolicies.setPolicyId(policyOptional.get());
 						optedPolicies.setUserId(userOptional.get());
-					 // optedPolicies.setNominee(null);
 						optedPoliciesRepository.save(optedPolicies);
 						responseData.setData(optedPolicies);
 						responseData.setHttpStatus(HttpStatus.OK);

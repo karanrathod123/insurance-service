@@ -17,10 +17,10 @@ import com.hcl.insurance.repository.PolicyRepository;
 public class TrendAnalysisService {
 
 	@Autowired
-	OptedPoliciesRepository optedPoliciesRepository;
+	private OptedPoliciesRepository optedPoliciesRepository;
 
 	@Autowired
-	PolicyRepository policyRepository;
+	private PolicyRepository policyRepository;
 
 	public ResponseData getPoliciesTrends(String trendType) {
 

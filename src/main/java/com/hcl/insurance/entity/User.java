@@ -37,5 +37,5 @@ public class User implements Serializable {
 
 	@OneToMany(mappedBy = "userId")
 	@JsonIgnore
-	List<OptedPolicies> userPolicies = new ArrayList<>();
+	private List<OptedPolicies> userPolicies = new ArrayList<>();
 }
