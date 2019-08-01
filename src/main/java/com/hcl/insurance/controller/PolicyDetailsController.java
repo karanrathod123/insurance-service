@@ -22,7 +22,7 @@ public class PolicyDetailsController {
 	@GetMapping
 	public ResponseEntity<Object> detailsOfPolicy(@RequestParam Long id) {
 		ResponseData responseData = policyDetailsService.detailsOfPolicy(id);
-		return new ResponseEntity<Object>(responseData, HttpStatus.OK);
+		return new ResponseEntity<>(responseData, HttpStatus.OK);
 
 	}
 }

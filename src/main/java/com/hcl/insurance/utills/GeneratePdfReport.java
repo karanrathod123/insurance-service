@@ -24,6 +24,8 @@ public class GeneratePdfReport {
 
 	private static final Logger logger = LoggerFactory.getLogger(GeneratePdfReport.class);
 
+	private GeneratePdfReport() {}
+	
 	public static ByteArrayInputStream userPolicyReport(List<PolicyReport> policyReport) {
 
 		Document document = new Document(PageSize.A4);

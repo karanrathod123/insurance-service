@@ -19,12 +19,13 @@ public class PolicyDetailsServiceImpl implements PolicyDetailsService {
 	@Autowired
 	private PolicyRepository policyRepository;
 	
-	private PolicyDetailsDto policyDetailsDto;
 	
-	List<PolicyDetailsDto> policyDetailsList = new ArrayList<PolicyDetailsDto>(); 
+	List<PolicyDetailsDto> policyDetailsList = new ArrayList<>(); 
 	
 	@Override
 	public ResponseData detailsOfPolicy(Long id) {
+		PolicyDetailsDto policyDetailsDto;
+		
 		Optional<Policy> policyOptional = policyRepository.findById(id);
 		ResponseData responseData = new ResponseData();
 		if(policyOptional.isPresent()) {

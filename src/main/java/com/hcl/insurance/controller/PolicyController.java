@@ -10,12 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hcl.insurance.dto.ResponseData;
 import com.hcl.insurance.service.PolicyService;
-import com.hcl.insurance.utills.GeneratePdfReport;
 
 @RestController
 @RequestMapping("/policies")

@@ -26,7 +26,7 @@ public class TrendAnalysisService {
 	public ResponseData getPoliciesTrends(String trendType) {
 
 		List<CalculatedPolicy> calculatedPolicies = new ArrayList<>();
-		List<Object[]> policies = Collections.emptyList();
+		List<Object[]> policies;
 
 		Integer totalCount = optedPoliciesRepository.findBySearchTermTotalPolicies();
 		
@@ -55,7 +55,6 @@ public class TrendAnalysisService {
 			policies.stream().forEach(a -> {
 				CalculatedPolicy calculatedPolicy = getCalculatedPolicyObject(a, totalCount);
 				Double percentage = Double.parseDouble(a[1].toString())/totalCount * 100;
-				System.out.println(percentage);
 				calculatedPolicy.setPercentage(percentage);
 				
 				calculatedPolicies.add(calculatedPolicy);
