@@ -11,8 +11,6 @@ public class TrendAnalysisService {
 	
 	public ResponseData getPoliciesTrends(String trendType) {
 
-		
-		
 		ResponseData response = new ResponseData();
 		
 		return response;
