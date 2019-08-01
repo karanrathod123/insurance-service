@@ -14,8 +14,14 @@ public class Policy {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long policyId;
+	
 	private String policyName;
+	
 	private Integer ageLimit;
+	
 	private Double sumAssured;
+	
 	private Integer policyTerm;
+	
+	private Double yearlyPremium;
 }
