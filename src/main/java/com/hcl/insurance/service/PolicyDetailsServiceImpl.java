@@ -20,7 +20,7 @@ public class PolicyDetailsServiceImpl implements PolicyDetailsService {
 	private PolicyRepository policyRepository;
 	
 	
-	List<PolicyDetailsDto> policyDetailsList = new ArrayList<>(); 
+	
 	
 	@Override
 	public ResponseData detailsOfPolicy(Long id) {
@@ -35,8 +35,7 @@ public class PolicyDetailsServiceImpl implements PolicyDetailsService {
 			policyDetailsDto.setPolicyName(policy.getPolicyName());
 			policyDetailsDto.setSumAssured(policy.getSumAssured());
 			policyDetailsDto.setTerm(policy.getPolicyTerm());
-			policyDetailsList.add(policyDetailsDto);
-			responseData.setData(policyDetailsList);
+			responseData.setData(policyDetailsDto);
 			responseData.setHttpStatus(HttpStatus.OK);
 			responseData.setMessage("Details of Policy Are as Follows");
 			
