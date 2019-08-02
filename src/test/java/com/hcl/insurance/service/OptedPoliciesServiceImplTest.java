@@ -77,6 +77,11 @@ public class OptedPoliciesServiceImplTest {
 	public void optedPoliciesFindByPolicyId() {
 		ResponseData responseData = optedPolicyServiceImpl.optedPolicies(optedPoliciesDto);
 		assertNotNull(responseData);
-	}
+  	}
 
+	
+	/*
+	 * @Test public void optedPoliciesFindBy
+	 */
+	
 }
