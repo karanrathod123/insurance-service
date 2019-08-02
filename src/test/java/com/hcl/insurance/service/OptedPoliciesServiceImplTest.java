@@ -14,6 +14,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.hcl.insurance.dto.OptedPoliciesDto;
 import com.hcl.insurance.dto.ResponseData;
+import com.hcl.insurance.entity.Policy;
 import com.hcl.insurance.entity.User;
 import com.hcl.insurance.repository.OptedPoliciesRepository;
 import com.hcl.insurance.repository.PolicyRepository;
@@ -38,6 +39,8 @@ public class OptedPoliciesServiceImplTest {
 
 	User user;
 	
+	Policy policy;
+
 	@Before
 	public void setup() {
 		optedPoliciesDto = new OptedPoliciesDto();
@@ -45,23 +48,35 @@ public class OptedPoliciesServiceImplTest {
 		optedPoliciesDto.setNominee("Vivek");
 		optedPoliciesDto.setPolicyId(1l);
 		optedPoliciesDto.setUserId(1l);
-		
+
 		user = new User();
 		user.setAge(34);
 		user.setEmail("Karan@123");
 		user.setMobileNumber("4567896534");
 		user.setUserId(1l);
 		user.setUserName("Karan");
+
+		policy = new Policy();
+		policy.setAgeLimit(34);
+		policy.setPolicyId(2l);
+		policy.setPolicyName("LIC");
 		
 	}
 
 	@Test
-	public void optedPolicies() {
+	public void optedPoliciesFindByUserId() {
 
 		Mockito.when(userRepository.findById(1l)).thenReturn(Optional.of(user));
 		ResponseData responseData = optedPolicyServiceImpl.optedPolicies(optedPoliciesDto);
 		assertNotNull(responseData);
 
+	}
+	
+	
+	@Test
+	public void optedPoliciesFindByPolicyId() {
+		ResponseData responseData = optedPolicyServiceImpl.optedPolicies(optedPoliciesDto);
+		assertNotNull(responseData);
 	}
 
 }
